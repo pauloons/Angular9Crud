@@ -1,12 +1,20 @@
 {
-    "products":
-    
-    [
-        {
-"id":1,
-"nome":"Computador",
-"price":5.4
-}    
-]
-
+  "products": [
+    {
+      "name": "Notebook Ace",
+      "price": "2500",
+      "model": "e55n",
+      "id": 1
+    }
+  ],
+  "clients": [
+    {
+      "nome": "PAULO ALEXANDRE MARTINS CINTRA",
+      "cpf": "023809091233",
+      "dtNasc": "1988-02-26",
+      "tel": 99981011255,
+      "email": "pauloons@gmail.com",
+      "id": 1
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crud-angular-4e532": {
+      "hosting": {
+        "frontend": [
+          "crud-angular-4e532"
+        ]
+      }
+    }
+  }
+}

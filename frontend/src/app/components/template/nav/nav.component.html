@@ -14,16 +14,15 @@
                 </i>
                 Produtos
             </a>
+            <a mat-list-item  routerLink="/clients">
+                <i class="material-icons">
+                    perm_identity
+                </i>
+                Cliente
+            </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
         <router-outlet></router-outlet>
     </mat-sidenav-content>
-
-
-
-    <mat-sidenav-content>
-        <app-product-crud></app-product-crud>
-    </mat-sidenav-content>
-
-    </mat-sidenav-container>
+</mat-sidenav-container>

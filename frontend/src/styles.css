@@ -3,15 +3,64 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.red{
-color:brown
-
+.red {
+    color: #e35e6b;
 }
-.blue{
 
-color: darkblue;
+.v-middle {
+    vertical-align: middle;
 }
-.v-middle{
-vertical-align: middle;
 
+.msg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.msg-error {
+    background-color: #e35e6b;
+    color: #fff;
+}
+@import 'reset';
+@import 'themes';
+
+body {
+  margin: 0;
+}
+
+.center {
+  margin: 10px auto;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.float-left {
+  float: left;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.quebrar-linha {
+  white-space: pre-line;
 }
