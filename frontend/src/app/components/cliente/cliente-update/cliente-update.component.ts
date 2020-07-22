@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cliente-update.component.css']
 })
 export class ClienteUpdateComponent implements OnInit {
-
+ 
   constructor() { }
-
   ngOnInit(): void {
   }
-
-}
+   
+  }

@@ -1,3 +1,41 @@
 .example-container .mat-form-field + .mat-form-field {
     margin-left: 8px;
   }
+
+  table {
+    width: 100%;
+}
+
+.edit {
+    margin-right: 10px;
+}
+
+.edit > i {
+    color: #d9cd26;
+}
+
+.delete > i {
+    color: #e35e6b;
+}
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+     padding: 10px;
+    .home-card {
+      margin-bottom: 10px;
+  
+    }
+  }
+  
+  .filtro-listagem {
+    width: calc(100% - 50px);
+  }
+  
+  .mat-card-image {
+    width: 182px;
+    height: 268px;
+    margin: auto;
+    display: block;
+  }

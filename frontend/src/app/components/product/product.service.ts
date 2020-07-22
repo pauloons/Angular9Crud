@@ -10,7 +10,8 @@ import { Observable, EMPTY } from "rxjs";
 export class ProductService {
   baseUrl = "http://localhost:3001/products";
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
+  constructor(private snackBar: MatSnackBar,
+     private http: HttpClient) {}
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {

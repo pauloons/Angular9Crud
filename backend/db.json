@@ -1,19 +1,19 @@
 {
   "products": [
     {
-      "name": "Notebook Ace",
-      "price": "2500",
-      "model": "e55n",
+      "name": "DELL",
+      "price": "90000",
+      "model": "C142",
       "id": 1
     }
   ],
   "clients": [
     {
-      "nome": "PAULO ALEXANDRE MARTINS CINTRA",
-      "cpf": "023809091233",
-      "dtNasc": "1988-02-26",
-      "tel": 99981011255,
-      "email": "pauloons@gmail.com",
+      "nome": "Rodrigo nascimento ",
+      "cpf": "111111111111",
+      "dtNasc": "2020-07-22",
+      "tel": 2222222,
+      "email": "yout@hotmail.com",
       "id": 1
     }
   ]

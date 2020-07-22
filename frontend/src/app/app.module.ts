@@ -37,7 +37,6 @@ import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
-import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
@@ -74,7 +73,7 @@ import { InputNumberComponent } from './components/campos/input-number/input-num
 import { InputDateComponent } from './components/campos/input-date/input-date.component';
 import { InputCpfComponent }from './components/campos/input-cpf/input-cpf.component';
 import { InputEmailComponent }from './components/campos/input-email/input-email.component';
-
+import { AlertaComponent } from './components/alerta/alerta.component';
 
 registerLocaleData(localePt);
 
@@ -103,9 +102,9 @@ registerLocaleData(localePt);
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
+    AlertaComponent,
   ],
   imports: [
-    
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
@@ -167,8 +166,8 @@ registerLocaleData(localePt);
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
   ],
+  entryComponents:[AlertaComponent],
   providers: [{
     provide: LOCALE_ID, 
     useValue: 'pt-BR'

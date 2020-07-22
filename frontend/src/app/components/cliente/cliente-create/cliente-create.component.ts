@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidarCamposService } from 'src/app/components/campos/validar-campos.service';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertaComponent } from '../../alerta/alerta.component';
+import { Alerta } from '../../alerta/alerta';
 
 
 
@@ -20,7 +23,12 @@ export class ClienteCreateComponent implements OnInit {
     public validacao:ValidarCamposService,
     private router:Router,
     private fb: FormBuilder,
-    private clienteService:ClienteService) { }
+    private clienteService:ClienteService,
+    public dialog: MatDialog
+  
+    ) { }
+    
+
 
   ngOnInit(): void {
     this.cadastro = this.fb.group({
@@ -42,6 +50,7 @@ get f(){
 const cliente = this.cadastro.getRawValue() as Cliente;
 this.salvar(cliente);
   }
+  
   deleteCliente(){
 
   }
@@ -57,13 +66,35 @@ this.salvar(cliente);
   }
   private salvar(cliente:Cliente):void{
     this.clienteService.salvar(cliente).subscribe(() => {
-      alert('salvando');
+     
+      const config ={
+      data:{
+       btnSucesso:'Ir para página de Clietes',
+       btnCancelar: 'Cadastrar outro Clientes',
+       corBtnCancelar: 'primary',
+       possuiBtnFechar: true,
+      } as Alerta
+      };
+      const dialogRef = this.dialog.open(AlertaComponent, config);
+      dialogRef.afterClosed().subscribe((opcao: boolean) => {
+        if (opcao) {
+          this.router.navigateByUrl('clients');
+        } else {
+          this.reiniciarForm();
+        }
+      });
     },
-    ()=>{
-      alert('nao salvou');
-    }
-   );
-  }
-}
+    () => {
+      const config = {
+        data: {
+          titulo: 'Erro ao salvar o registro!',
+          descricao: 'Não conseguimos salvar seu registro, favor tentar novamente mais tarde',
+          corBtnSucesso: 'warn',
+          btnSucesso: 'Fechar'
+        } as Alerta
+      };
+      this.dialog.open(AlertaComponent, config);
+    });
+  }}
 
 

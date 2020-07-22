@@ -1,7 +1,7 @@
 <mat-toolbar class="app-title">Cadastrar Produto</mat-toolbar>
 <mat-card class="center width100">
     <mat-card-title>Novo Produto</mat-card-title>
-    <form>
+    <form (ngReset)="reiniciarForm()"> 
         <mat-form-field>
             <input matInput placeholder="Nome"
                 [(ngModel)]="product.name" name="name">
@@ -22,5 +22,6 @@
     <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
+    <button type="reset" mat-raised-button>Limpar</button>
 </mat-card>
 

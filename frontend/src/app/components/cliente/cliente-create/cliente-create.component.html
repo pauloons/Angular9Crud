@@ -1,4 +1,5 @@
 <mat-toolbar class="app-title">Cadastrar Cliente</mat-toolbar>
+
   <mat-card class="center width100" *ngIf="cadastro" >       
       <form autocomplete="off" [formGroup]="cadastro" (ngSubimit)="submit()" (ngReset)="reiniciarForm()">   
         <mat-card-content>
@@ -9,9 +10,9 @@
             <app-input-email  name="email" controlName="email" [formGroup]="cadastro"></app-input-email>         
         </mat-card-content>
        <mat-card-actions>
-        <button  type="submit"  color="primary" mat-raised-button (click)="submit()"  >Salvar</button>
-        <button type="reset" mat-raised-button>Cancelar</button>
-        
+        <button  type="submit"  color="primary" mat-raised-button (click)="submit()" >Salvar</button>
+        <button type="submit" mat-raised-button (click)="cancel()">Voltar</button>
+        <button type="reset" mat-raised-button>Limpar</button>
       </mat-card-actions>
     </form>
 </mat-card>  
