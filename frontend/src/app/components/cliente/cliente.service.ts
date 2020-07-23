@@ -4,17 +4,17 @@ import { Observable } from "rxjs";
 import { Cliente } from "src/app/components/cliente/cliente";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
+
 const url = "http://localhost:3001/clients/";
 @Injectable({
   providedIn: 'root',
-})   
-export class ClienteService {   
+})
+export class ClienteService {
   baseUrl = "http://localhost:3001/clients/";
+  constructor(private http: HttpClient,
+    private snackBar: MatSnackBar) { }
 
-  constructor(private http:HttpClient, 
-             private snackBar: MatSnackBar) { }
-
-  salvar(cliente:Cliente):Observable<Cliente>{
+  salvar(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(url, cliente);
   }
   read(): Observable<Cliente[]> {
@@ -27,14 +27,18 @@ export class ClienteService {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Cliente>(url)
   }
- 
-  delete(id:number):Observable<Cliente>{
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/${cliente.id}`;
+    return this.http.put<Cliente>(url, cliente)
+  }
+
+  delete(id: number): Observable<Cliente> {
     const url = `${this.baseUrl}/${id}`;
-   return this.http.delete<Cliente>(url)
+    return this.http.delete<Cliente>(url)
   }
-  excluir(id: number): Observable<void> {
+ /*  delete(id: number): Observable<void> {
     return this.http.delete<void>(url + id);
-  }
+  } */
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {
       duration: 3000,
@@ -43,6 +47,5 @@ export class ClienteService {
       panelClass: isError ? ["msg-error"] : ["msg-success"],
     });
   }
-
 }
 

@@ -17,10 +17,10 @@ export class ProductCreateComponent implements OnInit {
   }
 
   constructor(private productService: ProductService,
-      private router: Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
 
   createProduct(): void {

@@ -17,63 +17,63 @@ import { Alerta } from '../../alerta/alerta';
 })
 export class ClienteCreateComponent implements OnInit {
 
-  cadastro:FormGroup;
+  cadastro: FormGroup;
 
   constructor(
-    public validacao:ValidarCamposService,
-    private router:Router,
+    public validacao: ValidarCamposService,
+    private router: Router,
     private fb: FormBuilder,
-    private clienteService:ClienteService,
+    private clienteService: ClienteService,
     public dialog: MatDialog
-  
-    ) { }
-    
+
+  ) { }
+
 
 
   ngOnInit(): void {
     this.cadastro = this.fb.group({
-      nome: ['',[Validators.required,Validators.minLength(2),Validators.maxLength(256)]],
-      cpf: ['',[Validators.required,Validators.minLength(11),Validators.maxLength(13)]],
+      nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
+      cpf: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(13)]],
       dtNasc: [''],
-      tel:  [''],
-      email:  ['', Validators.compose([Validators.email])],
+      tel: [''],
+      email: ['', Validators.compose([Validators.email])],
     });
   }
-get f(){
-  return this.cadastro.controls;
-}
-  submit():void{
+  get f() {
+    return this.cadastro.controls;
+  }
+  submit(): void {
     this.cadastro.markAllAsTouched();
-    if (this.cadastro.invalid){
+    if (this.cadastro.invalid) {
       return;
     }
-const cliente = this.cadastro.getRawValue() as Cliente;
-this.salvar(cliente);
+    const cliente = this.cadastro.getRawValue() as Cliente;
+    this.salvar(cliente);
   }
-  
-  deleteCliente(){
+
+  deleteCliente() {
 
   }
-  updateCliente(){
+  updateCliente() {
 
   }
-  cancel(){
-   this.router.navigate(['./clients'])
+  cancel() {
+    this.router.navigate(['./clients'])
 
-  }  
+  }
   reiniciarForm(): void {
     this.cadastro.reset();
   }
-  private salvar(cliente:Cliente):void{
+  private salvar(cliente: Cliente): void {
     this.clienteService.salvar(cliente).subscribe(() => {
-     
-      const config ={
-      data:{
-       btnSucesso:'Ir para página de Clietes',
-       btnCancelar: 'Cadastrar outro Clientes',
-       corBtnCancelar: 'primary',
-       possuiBtnFechar: true,
-      } as Alerta
+
+      const config = {
+        data: {
+          btnSucesso: 'Ir para página de Clietes',
+          btnCancelar: 'Cadastrar outro Cliente',
+          corBtnCancelar: 'primary',
+          possuiBtnFechar: true,
+        } as Alerta
       };
       const dialogRef = this.dialog.open(AlertaComponent, config);
       dialogRef.afterClosed().subscribe((opcao: boolean) => {
@@ -84,17 +84,18 @@ this.salvar(cliente);
         }
       });
     },
-    () => {
-      const config = {
-        data: {
-          titulo: 'Erro ao salvar o registro!',
-          descricao: 'Não conseguimos salvar seu registro, favor tentar novamente mais tarde',
-          corBtnSucesso: 'warn',
-          btnSucesso: 'Fechar'
-        } as Alerta
-      };
-      this.dialog.open(AlertaComponent, config);
-    });
-  }}
+      () => {
+        const config = {
+          data: {
+            titulo: 'Erro ao salvar o registro!',
+            descricao: 'Não conseguimos salvar seu registro, favor tentar novamente mais tarde',
+            corBtnSucesso: 'warn',
+            btnSucesso: 'Fechar'
+          } as Alerta
+        };
+        this.dialog.open(AlertaComponent, config);
+      });
+  }
+}
 
 

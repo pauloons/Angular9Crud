@@ -2,7 +2,7 @@ import { Product } from "./../product.model";
 import { Router, ActivatedRoute } from "@angular/router";
 import { ProductService } from "./../product.service";
 import { Component, OnInit } from "@angular/core";
-import { MatCardModule }from'@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: "app-product-update",
@@ -17,7 +17,7 @@ export class ProductUpdateComponent implements OnInit {
     private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get("id");

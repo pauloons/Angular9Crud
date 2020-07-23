@@ -9,12 +9,20 @@
   ],
   "clients": [
     {
-      "nome": "Rodrigo nascimento ",
-      "cpf": "111111111111",
-      "dtNasc": "2020-07-22",
-      "tel": 2222222,
-      "email": "yout@hotmail.com",
+      "nome": "PAULO ALEXANDRE MARTINS CINTRA",
+      "cpf": "023802081112",
+      "dtNasc": "1988-02-26",
+      "tel": 61987441211,
+      "email": "pauloons@gmail.com",
       "id": 1
+    },
+    {
+      "nome": "leda martins",
+      "cpf": "54688854154",
+      "dtNasc": "1865-10-22",
+      "tel": 6289744541,
+      "email": "ledamartins@hotmail.com",
+      "id": 2
     }
   ]
 }

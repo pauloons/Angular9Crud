@@ -1,27 +1,24 @@
-<mat-toolbar class="app-title">Cadastrar Produto</mat-toolbar>
-<mat-card class="center width100">
-    <mat-card-title>Novo Produto</mat-card-title>
-    <form (ngReset)="reiniciarForm()"> 
-        <mat-form-field>
-            <input matInput placeholder="Nome"
-                [(ngModel)]="product.name" name="name">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)"
-                [(ngModel)]="product.price" name="price">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder= "Modelo"
-                [(ngModel)]="product.model" name="model">
-        </mat-form-field>
-    </form>
-    <button mat-raised-button (click)="createProduct()" color="primary">
-        Salvar
-    </button>
-    
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
-    <button type="reset" mat-raised-button>Limpar</button>
-</mat-card>
+<div class="mat-elevation-z4">
+    <mat-toolbar class="app-title">Cadastrar Produto</mat-toolbar>
+    <mat-card class="center width100">
+        <form (ngReset)="reiniciarForm()">
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Modelo" [(ngModel)]="product.model" name="model">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="createProduct()" color="primary">
+            Salvar
+        </button>
 
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+        <button type="reset" mat-raised-button>Limpar</button>
+    </mat-card>
+</div>

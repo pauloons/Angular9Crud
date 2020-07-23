@@ -11,7 +11,7 @@ export class ProductService {
   baseUrl = "http://localhost:3001/products";
 
   constructor(private snackBar: MatSnackBar,
-     private http: HttpClient) {}
+    private http: HttpClient) { }
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {
@@ -38,11 +38,11 @@ export class ProductService {
   update(product: Product): Observable<Product> {
     const url = `${this.baseUrl}/${product.id}`;
     return this.http.put<Product>(url, product)
-  }  
-  
-  delete(id:number):Observable<Product>{
-    const url = `${this.baseUrl}/${id}`;
-   return this.http.delete<Product>(url)
   }
-  
+
+  delete(id: number): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Product>(url)
+  }
+
 }

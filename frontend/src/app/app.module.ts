@@ -8,16 +8,16 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { MatSidenavModule } from  '@angular/material/sidenav';
-import { MatCardModule } from  '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { MatAutocompleteModule }from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import { MatButtonModule } from  '@angular/material/button';
-import { MatSnackBarModule } from  '@angular/material/snack-bar';
-import { HttpClientModule } from  '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -29,41 +29,41 @@ import { MatSortModule } from '@angular/material/sort';
 import { RedDirective } from './directives/red.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from  '@angular/common';
+import { registerLocaleData } from '@angular/common';
 import { ForDirective } from './directives/for.directive';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import {A11yModule} from '@angular/cdk/a11y';
-import {ClipboardModule} from '@angular/cdk/clipboard';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {PortalModule} from '@angular/cdk/portal';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import { A11yModule } from '@angular/cdk/a11y';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PortalModule } from '@angular/cdk/portal';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
 
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTreeModule} from '@angular/material/tree';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
 import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-read.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
@@ -71,8 +71,8 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
 import { InputTextComponent } from './components/campos/input-text/input-text.component';
 import { InputNumberComponent } from './components/campos/input-number/input-number.component';
 import { InputDateComponent } from './components/campos/input-date/input-date.component';
-import { InputCpfComponent }from './components/campos/input-cpf/input-cpf.component';
-import { InputEmailComponent }from './components/campos/input-email/input-email.component';
+import { InputCpfComponent } from './components/campos/input-cpf/input-cpf.component';
+import { InputEmailComponent } from './components/campos/input-email/input-email.component';
 import { AlertaComponent } from './components/alerta/alerta.component';
 
 registerLocaleData(localePt);
@@ -167,9 +167,9 @@ registerLocaleData(localePt);
     MatTreeModule,
     PortalModule,
   ],
-  entryComponents:[AlertaComponent],
+  entryComponents: [AlertaComponent],
   providers: [{
-    provide: LOCALE_ID, 
+    provide: LOCALE_ID,
     useValue: 'pt-BR'
   }],
   bootstrap: [AppComponent]

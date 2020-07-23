@@ -8,24 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./client-crud.component.css']
 })
 
-
 export class ClientCrudComponent implements OnInit {
 
-
-  
-  constructor(private router:Router, private headerService:HeaderService) {
-    headerService.headerData ={
-title:'Cliente',
-icon:'perm_identity',
-routeUrl:'clients'
-
+  constructor(private router: Router, private headerService: HeaderService) {
+    headerService.headerData = {
+      title: 'Cadastro de Clientes',
+      icon: 'perm_identity',
+      routeUrl: 'clients'
     }
-   }
-
+  }
   ngOnInit(): void {
   }
-  navegarToClienteCreate():void{
-  this.router.navigate(['./clients/create'])
+  navegarToClienteCreate(): void {
+    this.router.navigate(['./clients/create'])
   }
 
 }
